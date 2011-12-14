@@ -2,7 +2,7 @@
 /**
  * Plugin Name: 	Bubbles
  * Plugin URI: 		http://kremalicious.com
- * Description: 	Transforms the standard WordPress update & comment notification bubbles into iOS-styled ones. No settings needed, just activate and enjoy the red bubbles.
+ * Description: 	Transforms the standard WordPress update & comment notification bubbles into iOS-styled ones. Just activate and enjoy the red bubbles.
  * Author: 			Matthias Kretschmann
  * Author URI: 		http://matthiaskretschmann.com
  * Version: 		0.1.0
