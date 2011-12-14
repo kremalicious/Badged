@@ -62,4 +62,15 @@ if ( is_admin() ) {
 
 register_activation_hook(__FILE__, 'bubbles_activation');
 
+
+// Add settings link on plugin page
+function bubbles_settings_link($links) { 
+  $settings_link = '<a href="options-general.php?page=bubbles_settings">'. __('Settings') .'</a>'; 
+  array_unshift($links, $settings_link); 
+  return $links; 
+}
+ 
+$plugin = plugin_basename(__FILE__); 
+add_filter('plugin_action_links_'.$plugin, 'bubbles_settings_link' );
+
 ?>
