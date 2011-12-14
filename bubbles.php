@@ -15,7 +15,6 @@ if (function_exists('load_plugin_textdomain')) {
 }
  
 function bubbles_init() {
-	
 	bubbles_register_settings();
 	if ( get_option('menu') == 'yes') {
 		wp_register_style('bubbles-menu-css', plugins_url('/bubbles/bubbles-menu.css'), false, '9001');
@@ -26,7 +25,13 @@ function bubbles_init() {
 		wp_register_style('bubbles-bar-css', plugins_url('/bubbles/bubbles-bar.css'), false, '9001');
 		wp_enqueue_style('bubbles-bar-css');
 	}
-	
+}
+
+function bubbles_bar_only_init() {
+	if ( get_option('bar') == 'yes') {
+		wp_register_style('bubbles-bar-css', plugins_url('/bubbles/bubbles-bar.css'), false, '9001');
+		wp_enqueue_style('bubbles-bar-css');
+	}
 }
 
 function bubbles_settings() {
@@ -51,6 +56,8 @@ function bubbles_activation() {
 if ( is_admin() ) {
 	add_action('admin_init', 'bubbles_init');
 	add_action('admin_menu', 'bubbles_settings');
+} elseif ( !is_admin() && get_option('bar') == 'yes' ) {
+	add_action('admin_bar_init', 'bubbles_bar_only_init');
 }
 
 register_activation_hook(__FILE__, 'bubbles_activation');
