@@ -1,27 +1,29 @@
-=== Bubbles - iOS Style Notification Bubbles for WordPress ===
+=== Badges ===
 Contributors: kremalicious
 Donate link: http://kremalicious.com/
 Tags: notification, adminmenu, toolbar, ios
 Requires at least: 2.7
 Tested up to: 3.3
-Stable tag: 0.5
+Stable tag: 0.3
 
-Transforms the standard WordPress update & comment notification bubbles into iOS-styled ones.
+iOS Style Notification Badges for WordPress
 
 == Description ==
 
-Bubbles transforms the standard WordPress update & comment notification bubbles into iOS-styled ones.
+Badges transforms the standard WordPress update & comment notification badges into iOS-styled ones.
+
+The badges are CSS only and were tested in current versions of Safari, Chrome & Firefox. It should degrade gracefully in older Browsers with some details missing like drop shadows or the highlight shine.
 
 
 == Installation ==
 
-Just install, activate and enjoy the red bubbles:
+Just install, activate and enjoy the red badges:
 
-1. Upload the bubbles plugin folder to the '/wp-content/plugins/' directory
+1. Upload the badges plugin folder to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Enjoy
 
-(optional) Adjust options under Settings > Bubbles
+(optional) Adjust options under Settings > Badges
 
 
 == Screenshots ==
@@ -32,8 +34,11 @@ Just install, activate and enjoy the red bubbles:
 
 == Changelog ==
 
-= v0.2 =
+= v0.3 =
 * initial beta release
+
+= v0.2 =
+* added options to control whether the badges show up in admin menu or toolbar (default is both)
 
 = v0.1 =
 * initial alpha release
