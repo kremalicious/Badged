@@ -1,0 +1,76 @@
+<?php
+/**
+ * Plugin Name: 	Badged
+ * Plugin URI: 		http://kremalicious.com
+ * Description: 	Transforms the standard WordPress update & comment notification badges into iOS-styled ones. Just activate and enjoy the red Badges.
+ * Author: 			Matthias Kretschmann
+ * Author URI: 		http://matthiaskretschmann.com
+ * Version: 		0.3
+ * License: 		GPL
+ */
+
+ 
+if (function_exists('load_plugin_textdomain')) {
+	load_plugin_textdomain('bdgd', false, dirname(plugin_basename(__FILE__)).'/languages' );
+}
+ 
+function badged_init() {
+	badged_register_settings();
+	if ( get_option('menu') == 'yes') {
+		wp_register_style('badged-menu-css', plugins_url('css/badged-menu.css', __FILE__), false, '9001');
+		wp_enqueue_style('badged-menu-css');
+	}
+	
+	if ( get_option('bar') == 'yes') {
+		wp_register_style('badged-bar-css', plugins_url('css/badged-bar.css', __FILE__), false, '9001');
+		wp_enqueue_style('badged-bar-css');
+	}
+}
+
+function badged_bar_only_init() {
+	if ( get_option('bar') == 'yes') {
+		wp_register_style('badged-bar-css', plugins_url('css/badged-bar.css', __FILE__), false, '9001');
+		wp_enqueue_style('badged-bar-css');
+	}
+}
+
+function badged_settings() {
+	add_options_page('Badged Options', 'Badged', 'manage_options', 'badged_settings', 'badged_settings_page');
+}
+
+function badged_register_settings() {
+	register_setting('badged', 'menu');
+	register_setting('badged', 'bar');
+}
+
+function badged_settings_page() { 
+	require_once('badged-settings.php'); 
+}
+
+function badged_activation() {
+	badged_register_settings();
+	update_option('menu', 'yes');
+	update_option('bar', 'yes');
+}
+
+if ( is_admin() ) {
+	add_action('admin_init', 'badged_init');
+	add_action('admin_menu', 'badged_settings');
+} elseif ( !is_admin() && get_option('bar') == 'yes' ) {
+	add_action('admin_bar_init', 'badged_bar_only_init');
+}
+
+register_activation_hook(__FILE__, 'badged_activation');
+
+
+// Add settings link on plugin page
+function badged_settings_link($links) { 
+  $settings_link = '<a href="options-general.php?page=badged_settings">'. __('Settings') .'</a>'; 
+  array_unshift($links, $settings_link); 
+  return $links; 
+}
+ 
+$plugin = plugin_basename(__FILE__); 
+add_filter('plugin_action_links_'.$plugin, 'badged_settings_link' );
+
+?>
