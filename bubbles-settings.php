@@ -13,27 +13,23 @@
 				<tr valign="top">
 					<td colspan="2">
 						<h2><?php _e( 'View Options', 'bbls' ); ?></h2>
-						
 					</td>
 				</tr>
 				
 				<tr valign="top">
 					<th scope="row" class="indent">
-						<label for="menu"><?php _e( 'Style Notifications in Admin Menu', 'bbls' ); ?></label>
+						<?php _e( 'Style Notifications in', 'bbls' ); ?>
 					</th>
 					<td>
-						<input type="checkbox" name="menu" value="yes"<?php echo get_option('menu') == 'yes' ? ' checked' : '';?> />
+						<fieldset>
+							<input type="checkbox" name="menu" id="menu" value="yes"<?php echo get_option('menu') == 'yes' ? ' checked' : '';?> />
+							<label for="menu"><?php _e( 'Admin Menu', 'bbls' ); ?></label>
+							<br />
+							<input type="checkbox" name="bar" id="bar" value="yes"<?php echo get_option('bar') == 'yes' ? ' checked' : '';?> />
+							<label for="bar"><?php _e( 'Toolbar', 'bbls' ); ?></label>
+						</fieldset>
 					</td>
-				</tr>
-				
-				<tr valign="top">
-					<th scope="row" class="indent">
-						<label for="bar"><?php _e( 'Style Notifications in Adminbar', 'bbls' ); ?></label>
-					</th>
-					<td>
-						<input type="checkbox" name="bar" value="yes"<?php echo get_option('bar') == 'yes' ? ' checked' : '';?> />
-					</td>
-				</tr>				
+				</tr>	
 
 			</table>
 
