@@ -14,7 +14,10 @@
 #adminmenu span.update-plugins,
 #sidemenu li a span.update-plugins,
 #sidemenu a .update-plugins, 
-#rightnow .reallynow {
+#rightnow .reallynow,
+
+#wp-admin-bar-updates .ab-label,
+#wp-admin-bar-comments .ab-label {
 	/* need to be rude for these */
 	background-color: #d5231f !important;
 	-webkit-box-shadow: 0px 2px 2px #888 !important;
@@ -53,11 +56,22 @@
 		box-shadow: 0px 2px 2px #444 !important;
 	}
 	
+	/* Notifications in Adminbar */
+	#wp-admin-bar-updates .ab-label,
+	#wp-admin-bar-comments .ab-label {
+		padding: 0 3px;
+		position: relative;
+		-webkit-box-shadow: 0px 2px 2px #000 !important;
+		-moz-box-shadow: 0px 2px 2px #000 !important;
+		box-shadow: 0px 2px 2px #000 !important;
+	}
+	
 	/* inject another styling layer, for inset shadow & shine gradient */
 	#adminmenu .awaiting-mod:before,
 	#adminmenu .update-plugins:before,
 	#sidemenu .update-plugins:before,
-	.reallynow:before {
+	.reallynow:before,
+	#wp-admin-bar-updates .ab-label:before {
 		content: "";
 		position: absolute;
 		left: 0;
