@@ -1,14 +1,26 @@
 
 /* ============================================================== */
-/*   Bubbles */
+/*   Badged */
 /*   ------------------------ */
-/*   CSS Styles for the Admin Bar only */
+/*   CSS Styles for the Admin Menu only */
 /*   by Matthias Kretschmann | http://mkretschmann.com */
 /* ============================================================== */
 
-#wp-admin-bar-updates .ab-label,
-#wp-admin-bar-comments .ab-label {
+
+/* Select all instances of the WP notification bubble using the 
+   same selectors WP uses */
+
+#adminmenu .awaiting-mod,
+#adminmenu span.update-plugins,
+#sidemenu li a span.update-plugins,
+#sidemenu a .update-plugins, 
+#rightnow .reallynow {
+	/* need to be rude for these */
 	background-color: #d5231f !important;
+	-webkit-box-shadow: 0px 2px 2px #888 !important;
+	-moz-box-shadow: 0px 2px 2px #888 !important;
+	box-shadow: 0px 2px 2px #888 !important;
+	
 	color: #fff; /* just in case, is white per WP default */
 	font: 11px/15px Helvetica, Verdana, Geneva, sans-serif;
 	text-shadow: 0 1px 1px #771717;
@@ -31,18 +43,21 @@
 	background-clip: padding-box;
 
 	margin-top: -1px;
-	
-	padding: 0 3px;
-	position: relative;
-	-webkit-box-shadow: 0px 2px 2px #000 !important;
-	-moz-box-shadow: 0px 2px 2px #000 !important;
-	box-shadow: 0px 2px 2px #000 !important;
 }
-
-
+	
+	/* darker shadow for badged on active menus */
+	#adminmenu li.current a .awaiting-mod,
+	#adminmenu li a.wp-has-current-submenu .update-plugins {
+		-webkit-box-shadow: 0px 2px 2px #444 !important;
+		-moz-box-shadow: 0px 2px 2px #444 !important;
+		box-shadow: 0px 2px 2px #444 !important;
+	}
+	
 	/* inject another styling layer, for inset shadow & shine gradient */
-	#wp-admin-bar-updates .ab-label:before,
-	#wp-admin-bar-comments .ab-label:before {
+	#adminmenu .awaiting-mod:before,
+	#adminmenu .update-plugins:before,
+	#sidemenu .update-plugins:before,
+	.reallynow:before {
 		content: "";
 		position: absolute;
 		left: 0;
@@ -67,3 +82,34 @@
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=1 );
 
 	}
+
+/* a bit less padding on the number inside */
+#adminmenu li .awaiting-mod span, 
+#adminmenu li span.update-plugins span, 
+#sidemenu li a span.update-plugins span {
+	padding: 0 4px;
+}
+
+
+
+
+/* ============================================================== */
+/*   The Options Page */
+/* ============================================================== */
+
+#badgedoptions form h2 {
+	border-bottom: 1px solid #eee;
+	border-top: 1px solid #eee;
+	margin-top: .5em;
+	padding: 10px 0;
+}
+
+#badgedoptions footer {
+	border-top: 1px solid #eee;
+	color: #666;
+}
+
+#badgedoptions .icon32 {
+	background-image: url(../img/icon-badged-32.png);
+	background-repeat: no-repeat;
+}

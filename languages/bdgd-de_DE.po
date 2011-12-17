@@ -19,33 +19,38 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: bubbles-settings.php:21
-#@ bbls
+#: badged-settings.php:5
+#@ bdgd
+msgid "Badged Settings"
+msgstr "Badged Einstellungen"
+
+#: badged-settings.php:15
+#@ bdgd
+msgid "View"
+msgstr "Anzeige"
+
+#: badged-settings.php:21
+#@ bdgd
 msgid "Style Notifications in"
 msgstr "Benachrichtigungen ersetzen in"
 
-#: bubbles-settings.php:26
-#@ bbls
+#: badged-settings.php:26
+#@ bdgd
 msgid "Admin Menu"
-msgstr "Admin Menü"
+msgstr "Admin-Menü"
 
-#: bubbles-settings.php:29
-#@ bbls
+#: badged-settings.php:29
+#@ bdgd
 msgid "Toolbar"
 msgstr "Werkzeugleiste"
 
-#: bubbles-settings.php:5
-#@ bbls
-msgid "Bubbles Settings"
-msgstr "Bubbles Einstellungen"
+#: badged-settings.php:41
+#@ bdgd
+msgid "Thanks for using Badged. Created by"
+msgstr "Danke für die Nutzung von Badged. Erstellt von"
 
-#: bubbles-settings.php:41
-#@ bbls
-msgid "Thanks for using Bubbles. Created by"
-msgstr "Danke für das Benutzen von Bubbles. Erstellt von"
-
-#: bubbles-settings.php:15
-#@ bbls
-msgid "View"
-msgstr "Anzeige"
+#: badged.php:68
+#@ default
+msgid "Settings"
+msgstr ""
 
