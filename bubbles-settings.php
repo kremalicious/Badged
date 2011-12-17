@@ -2,7 +2,7 @@
 		
 		<header>
 			<div class="icon32"></div>
-			<h2><?php _e( 'Bubbles Options', 'bbls' ); ?></h2>
+			<h2><?php _e( 'Bubbles Settings', 'bbls' ); ?></h2>
 		</header>
 		
 		<form method="post" action="options.php">
@@ -12,7 +12,7 @@
 				
 				<tr valign="top">
 					<td colspan="2">
-						<h2><?php _e( 'View Options', 'bbls' ); ?></h2>
+						<h2><?php _e( 'View', 'bbls' ); ?></h2>
 					</td>
 				</tr>
 				
@@ -38,7 +38,7 @@
 		</form>
 		
 		<footer>
-			<p>Thanks for using Bubbles. Created by <a href="http://mkretschmann.com">Matthias Kretschmann</a> (<a href="https://twitter.com/kremalicious">@kremalicious</a>)</p>
+			<p><?php _e('Thanks for using Bubbles. Created by', 'bbls'); ?> <a href="http://mkretschmann.com">Matthias Kretschmann</a> (<a href="https://twitter.com/kremalicious">@kremalicious</a>)</p>
 		</footer>
 		
 	</div>
