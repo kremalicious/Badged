@@ -4,7 +4,7 @@ Donate link: http://www.kremalicious.com/2011/12/badged/
 Tags: notification, adminmenu, toolbar, ios, badge
 Requires at least: 2.7
 Tested up to: 3.3
-Stable tag: 0.3.3
+Stable tag: 0.3.4
 
 iOS Style Notification Badges for WordPress
 
@@ -42,7 +42,7 @@ For manual installation:
 
 == Changelog ==
 
-= v0.3.3 =
+= v0.3.4 =
 * more descriptive readme and settings footer with links to blog post & github page
 * updated translation
 
