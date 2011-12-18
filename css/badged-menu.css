@@ -51,6 +51,7 @@
 		-webkit-box-shadow: 0px 2px 2px #444 !important;
 		-moz-box-shadow: 0px 2px 2px #444 !important;
 		box-shadow: 0px 2px 2px #444 !important;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 );
 	}
 	
 	/* inject another styling layer, for inset shadow & shine gradient */
@@ -91,8 +92,6 @@
 }
 
 
-
-
 /* ============================================================== */
 /*   The Options Page */
 /* ============================================================== */
@@ -113,3 +112,28 @@
 	background-image: url(../img/icon-badged-32.png);
 	background-repeat: no-repeat;
 }
+
+
+/* ============================================================== */
+/*   IE 8 Only Styles */
+/*  ============================================================== */
+
+.ie8 #adminmenu .awaiting-mod,
+.ie8 #adminmenu span.update-plugins,
+.ie8 #sidemenu li a span.update-plugins,
+.ie8 #sidemenu a .update-plugins, 
+.ie8 #rightnow .reallynow {
+	filter: 
+		progid:DXImageTransform.Microsoft.Shadow(color=#888888,direction=180,strength=3) /* box-shadow replacement, bottom */
+		progid:DXImageTransform.Microsoft.Shadow(color=#b3b3b3,direction=90,strength=2) /* right */
+		progid:DXImageTransform.Microsoft.Shadow(color=#b3b3b3,direction=270,strength=2) /* left */;
+}
+
+	/* darker shadow for badged on active menus */
+	.ie8 #adminmenu li.current a .awaiting-mod,
+	.ie8 #adminmenu li a.wp-has-current-submenu .update-plugins {
+		filter: 
+			progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=180,strength=3) /* bottom */
+			progid:DXImageTransform.Microsoft.Shadow(color=#666666,direction=90,strength=2) /* right */
+			progid:DXImageTransform.Microsoft.Shadow(color=#666666,direction=270,strength=2) /* left */;
+	}

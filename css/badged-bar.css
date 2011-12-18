@@ -37,6 +37,7 @@
 	-webkit-box-shadow: 0px 2px 2px #000 !important;
 	-moz-box-shadow: 0px 2px 2px #000 !important;
 	box-shadow: 0px 2px 2px #000 !important;
+	vertical-align: baseline;
 }
 
 
@@ -49,7 +50,7 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		
+
 		-webkit-border-radius: 10px;
 		-moz-border-radius: 10px;
 		border-radius: 10px;
@@ -67,3 +68,17 @@
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=1 );
 
 	}
+	
+
+
+/* ============================================================== */
+/*   IE 8 Only Styles */
+/*  ============================================================== */
+
+.ie8 #wp-admin-bar-updates .ab-label,
+.ie8 #wp-admin-bar-comments .ab-label {
+	filter: 
+		progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=180,strength=3) /* bottom */
+		progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=90,strength=2) /* right */
+		progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=270,strength=2); /* left */
+}
