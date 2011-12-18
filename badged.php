@@ -5,7 +5,7 @@
  * Description: 	Transforms the standard WordPress update & comment notification badges into iOS-styled ones. Just activate and enjoy the red badges.
  * Author: 			Matthias Kretschmann
  * Author URI: 		http://matthiaskretschmann.com
- * Version: 		0.3.3
+ * Version: 		0.3.4
  * License: 		GPL
  */
 
