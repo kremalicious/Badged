@@ -44,18 +44,18 @@ msgstr "Admin-Menü"
 msgid "Toolbar"
 msgstr "Werkzeugleiste"
 
-#: badged.php:68
+#: badged.php:115
 #@ default
 msgid "Settings"
 msgstr ""
 
 #: badged-settings.php:41
 #@ bdgd
-msgid "Thanks for using Badged"
-msgstr "Danke für die Nutzung von Badged"
+msgid "Created by"
+msgstr "Erstellt von"
 
 #: badged-settings.php:41
 #@ bdgd
-msgid "Created by"
-msgstr "Erstellt von"
+msgid "Thanks for using"
+msgstr "Danke für die Nutzung von"
 
