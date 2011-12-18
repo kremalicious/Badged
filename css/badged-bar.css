@@ -78,6 +78,7 @@
 .ie8 #wp-admin-bar-updates .ab-label,
 .ie8 #wp-admin-bar-comments .ab-label {
 	filter: 
+		progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 )
 		progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=180,strength=3) /* bottom */
 		progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=90,strength=2) /* right */
 		progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=270,strength=2); /* left */
