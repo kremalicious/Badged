@@ -51,7 +51,6 @@
 		-webkit-box-shadow: 0px 2px 2px #444 !important;
 		-moz-box-shadow: 0px 2px 2px #444 !important;
 		box-shadow: 0px 2px 2px #444 !important;
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 );
 	}
 	
 	/* inject another styling layer, for inset shadow & shine gradient */
