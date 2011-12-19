@@ -4,7 +4,7 @@ Donate link: http://www.kremalicious.com/2011/12/badged/
 Tags: notification, adminmenu, toolbar, ios, badge
 Requires at least: 2.7
 Tested up to: 3.3
-Stable tag: 0.3.4
+Stable tag: 0.3.5
 
 iOS Style Notification Badges for WordPress
 
@@ -12,7 +12,7 @@ iOS Style Notification Badges for WordPress
 
 Badged transforms the standard WordPress update & comment notification badges into iOS-styled ones. Upon activation it automatically replaces the badge styles in the admin menu and the toolbar. An optional settings page allows to control whether the badges show up in the admin menu or toolbar only.
 
-The badges are created without any images by using CSS only (box shadows, gradients, pseudo elements, you name it) and were tested in current versions of Safari, Chrome, Firefox & Internet Explorer. It should degrade gracefully in older browsers with some details missing like drop shadows or the highlight shine.
+The badges are created without any images by using CSS only (box shadows, gradients, pseudo elements, you name it) and were tested in current versions of Safari, Chrome, Firefox, Opera & Internet Explorer. It should degrade gracefully in older browsers with some details missing like drop shadows or the highlight shine.
 
 The plugin is localized in english & german.
 
@@ -41,6 +41,11 @@ For manual installation:
 3. Settings page
 
 == Changelog ==
+
+= v0.3.5 =
+* IE 8 improvements: box shadow, light gradient through DXImageTransform filters (but no rounded corners, sorry)
+* current versions of IE & Opera are now among the tested browsers
+* updated settings page links
 
 = v0.3.4 =
 * more descriptive readme and settings footer with links to blog post & github page
