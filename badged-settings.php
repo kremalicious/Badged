@@ -38,7 +38,10 @@
 		</form>
 		
 		<footer>
-			<p><?php _e('Thanks for using', 'bdgd'); ?> <a href="http://www.kremalicious.com/2011/12/badged/" title="Badged Blog Post">Badged</a> (<a href="https://github.com/kremalicious/Badged/" title="Badged On Github">github</a>) &middot; <?php _e('Created by', 'bdgd'); ?> <a href="http://mkretschmann.com">Matthias Kretschmann</a> (<a href="https://twitter.com/kremalicious">@kremalicious</a>)</p>
+			<p>
+				<?php _e('Thanks for using', 'bdgd'); ?> <a href="http://www.kremalicious.com/2011/12/badged/" title="Badged Blog Post">Badged</a> (<a href="https://github.com/kremalicious/Badged/" title="Badged On Github">github</a>) &middot; <a href="http://krlc.us/givecoffee"><strong>Donate</strong></a>
+				<span class="alignright"><?php _e('Created by', 'bdgd'); ?> <a href="http://mkretschmann.com">Matthias Kretschmann</a> (<a href="https://twitter.com/kremalicious">@kremalicious</a>)</span>
+			</p>
 		</footer>
 		
 	</div>
