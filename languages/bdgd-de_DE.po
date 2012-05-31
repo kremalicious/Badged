@@ -49,13 +49,18 @@ msgstr "Werkzeugleiste"
 msgid "Settings"
 msgstr ""
 
-#: badged-settings.php:41
+#: badged-settings.php:43
 #@ bdgd
 msgid "Created by"
 msgstr "Erstellt von"
 
-#: badged-settings.php:41
+#: badged-settings.php:42
 #@ bdgd
 msgid "Thanks for using"
 msgstr "Danke für die Nutzung von"
+
+#: badged-settings.php:42
+#@ bdgd
+msgid "Donate"
+msgstr "Spenden"
 
