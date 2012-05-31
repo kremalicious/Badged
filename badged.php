@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: 	Badged
- * Plugin URI: 		http://www.kremalicious.com/2011/12/badged/
+ * Plugin URI: 		http://kremalicious.com/badged/
  * Description: 	Transforms the standard WordPress update & comment notification badges into iOS-styled ones. Just activate and enjoy the red badges.
  * Author: 			Matthias Kretschmann
  * Author URI: 		http://matthiaskretschmann.com
- * Version: 		0.3.5
+ * Version: 		0.3.6
  * License: 		GPL
  */
 

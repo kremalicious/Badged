@@ -1,10 +1,10 @@
 === Badged ===
 Contributors: kremalicious
-Donate link: http://www.kremalicious.com/2011/12/badged/
+Donate link: http://krlc.us/givecoffee
 Tags: notification, adminmenu, toolbar, ios, badge
 Requires at least: 2.7
-Tested up to: 3.3
-Stable tag: 0.3.5
+Tested up to: 3.4
+Stable tag: 0.3.6
 
 iOS Style Notification Badges for WordPress
 
@@ -12,13 +12,13 @@ iOS Style Notification Badges for WordPress
 
 Badged transforms the standard WordPress update & comment notification badges into iOS-styled ones. Upon activation it automatically replaces the badge styles in the admin menu and the toolbar. An optional settings page allows to control whether the badges show up in the admin menu or toolbar only.
 
-The badges are created without any images by using CSS only (box shadows, gradients, pseudo elements, you name it) and were tested in current versions of Safari, Chrome, Firefox, Opera & Internet Explorer. It should degrade gracefully in older browsers with some details missing like drop shadows or the highlight shine.
+The badges are created without any images by using only CSS (box shadows, gradients, pseudo elements, you name it) and were tested in current versions of Safari, Chrome, Firefox, Opera & Internet Explorer. It should degrade gracefully in older browsers with some details missing like drop shadows or the highlight shine.
 
 The plugin is localized in english & german.
 
 * * *
 
-[Badged Blog Post](http://www.kremalicious.com/2011/12/badged/) | [Badged on github](https://github.com/kremalicious/Badged)
+[Badged Blog Post](http://kremalicious.com/badged/) | [Badged on github](https://github.com/kremalicious/badged) | [Donate](http://krlc.us/givecoffee)
 
 
 == Installation ==
@@ -41,6 +41,11 @@ For manual installation:
 3. Settings page
 
 == Changelog ==
+
+= v0.3.6 =
+* tested for WP 3.4
+* settings page: Retina ready icon for high dpi devices, css only submit button
+* updated german translation
 
 = v0.3.5 =
 * IE 8 improvements: box shadow, light gradient through DXImageTransform filters (but no rounded corners, sorry)
