@@ -46,25 +46,37 @@ if (function_exists('load_plugin_textdomain')) {
 
 
 /**
+ * Plugin version, used for cache-busting of style and script file references.
+ *
+ * @since   1.0.0
+ *
+ * @var     string
+ */
+$version = '1.0.0';
+
+
+/**
  * Register the styles depending on options
  *
  */
 function badged_init() {
 	badged_register_settings();
+	wp_enqueue_style( 'badged-admin-styles', plugins_url( 'css/options.css', BADGED_PLUGIN_FILE), false, $version );
+	
 	if ( get_option('menu') == 'yes') {
-		wp_register_style('badged-menu-css', plugins_url('css/badged-menu.css', BADGED_PLUGIN_FILE), false, '9001');
+		wp_register_style('badged-menu-css', plugins_url('css/badged-menu.css', BADGED_PLUGIN_FILE), false, $version);
 		wp_enqueue_style('badged-menu-css');
 	}
 	
 	if ( get_option('bar') == 'yes') {
-		wp_register_style('badged-bar-css', plugins_url('css/badged-bar.css', BADGED_PLUGIN_FILE), false, '9001');
+		wp_register_style('badged-bar-css', plugins_url('css/badged-bar.css', BADGED_PLUGIN_FILE), false, $version);
 		wp_enqueue_style('badged-bar-css');
 	}
 }
 
 function badged_bar_only_init() {
 	if ( get_option('bar') == 'yes') {
-		wp_register_style('badged-bar-css', plugins_url('css/badged-bar.css', BADGED_PLUGIN_FILE), false, '9001');
+		wp_register_style('badged-bar-css', plugins_url('css/badged-bar.css', BADGED_PLUGIN_FILE), false, $version);
 		wp_enqueue_style('badged-bar-css');
 	}
 }
