@@ -18,9 +18,7 @@
 	
 	/* need to be rude for these */
 	background: #ff0000 !important;
-	-webkit-box-shadow: 0px 0px 1px #888 !important;
-	-moz-box-shadow: 0px 0px 1px #888 !important;
-	box-shadow: 0px 0px 1px #888 !important;
+	box-shadow: 0 1px 0 #888 !important;
 	
 	color: #fff; /* just in case, is white per WP default */
 	font: 12px/21px 'Helvetica Neue', Helvetica, Verdana, Geneva, sans-serif;
@@ -30,12 +28,8 @@
 	width: 21px;
 	height: 21px;
 	display: inline-block;
-	-webkit-border-radius: 21px;
-	-moz-border-radius: 21px;
 	border-radius: 21px;
-	
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding-box;
+
 	background-clip: padding-box;
 
 	margin-top: -2px;
