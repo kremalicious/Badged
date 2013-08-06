@@ -18,6 +18,21 @@
 				
 				<tr valign="top">
 					<th scope="row" class="indent">
+						<?php _e( 'Style', 'bdgd' ); ?>
+					</th>
+					<td>
+						<fieldset>
+							<input type="radio" name="ios6" id="ios6" value="ios6"<?php echo get_option('ios6') == 'yes' ? ' checked' : '';?> />
+							<label for="ios6"><?php _e( 'iOS 6', 'bdgd' ); ?></label>
+							<br />
+							<input type="radio" name="ios7" id="ios7" value="ios7"<?php echo get_option('ios7') == 'yes' ? ' checked' : '';?> />
+							<label for="ios7"><?php _e( 'iOS 7', 'bdgd' ); ?></label>
+						</fieldset>
+					</td>
+				</tr>
+				
+				<tr valign="top">
+					<th scope="row" class="indent">
 						<?php _e( 'Style Notifications in', 'bdgd' ); ?>
 					</th>
 					<td>
@@ -29,7 +44,7 @@
 							<label for="bar"><?php _e( 'Toolbar', 'bdgd' ); ?></label>
 						</fieldset>
 					</td>
-				</tr>	
+				</tr>
 
 			</table>
 

@@ -80,6 +80,8 @@ function badged_settings() {
 function badged_register_settings() {
 	register_setting('badged', 'menu');
 	register_setting('badged', 'bar');
+	register_setting('badged', 'ios6');
+	register_setting('badged', 'ios7');
 }
 
 function badged_settings_page() { 
@@ -95,6 +97,7 @@ function badged_activation() {
 	badged_register_settings();
 	update_option('menu', 'yes');
 	update_option('bar', 'yes');
+	update_option('ios6', 'yes');
 }
 
 if ( is_admin() ) {
