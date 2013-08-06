@@ -1,0 +1,118 @@
+
+/* ============================================================== */
+/*   Badged */
+/*   ------------------------ */
+/*   CSS Styles for the Admin Menu only */
+/*   by Matthias Kretschmann | http://mkretschmann.com */
+/* ============================================================== */
+
+
+/* Select all instances of the WP notification bubble using the 
+   same selectors WP uses */
+
+#adminmenu .awaiting-mod,
+#adminmenu span.update-plugins,
+#sidemenu li a span.update-plugins,
+#sidemenu a .update-plugins, 
+#rightnow .reallynow {
+	/* need to be rude for these */
+	background-color: #d5231f !important;
+	-webkit-box-shadow: 0px 2px 2px #888 !important;
+	-moz-box-shadow: 0px 2px 2px #888 !important;
+	box-shadow: 0px 2px 2px #888 !important;
+	
+	color: #fff; /* just in case, is white per WP default */
+	font: 11px/15px Helvetica, Verdana, Geneva, sans-serif;
+	text-shadow: 0 1px 1px #771717;
+	
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(255,255,255,0)));
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 );
+	
+	border: 2px solid #fff;
+	-webkit-border-radius: 10px; /* just in case, is 10px per WP default */
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+
+	margin-top: -1px;
+}
+	
+	/* darker shadow for badged on active menus */
+	#adminmenu li.current a .awaiting-mod,
+	#adminmenu li a.wp-has-current-submenu .update-plugins {
+		-webkit-box-shadow: 0px 2px 2px #444 !important;
+		-moz-box-shadow: 0px 2px 2px #444 !important;
+		box-shadow: 0px 2px 2px #444 !important;
+	}
+	
+	/* inject another styling layer, for inset shadow & shine gradient */
+	#adminmenu .awaiting-mod:before,
+	#adminmenu .update-plugins:before,
+	#sidemenu .update-plugins:before,
+	.reallynow:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+
+		-webkit-box-shadow: inset 0 0 3px #631212;
+		-moz-box-shadow: inset 0 0 3px #631212;
+		box-shadow: inset 0 0 3px #631212;
+		
+		background: -moz-radial-gradient(center -5px, circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.3) 59%, rgba(255,255,255,0) 65%, rgba(255,255,255,0) 100%);
+		background: -webkit-gradient(radial, center -5px, 0px, center -5px, 100%, color-stop(0%,rgba(255,255,255,0.3)), color-stop(59%,rgba(255,255,255,0.3)), color-stop(65%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0)));
+		background: -webkit-radial-gradient(center -5px, circle, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 59%,rgba(255,255,255,0) 65%,rgba(255,255,255,0) 100%);
+		background: -o-radial-gradient(center -5px, circle, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 59%,rgba(255,255,255,0) 65%,rgba(255,255,255,0) 100%);
+		background: -ms-radial-gradient(center -5px, circle, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 59%,rgba(255,255,255,0) 65%,rgba(255,255,255,0) 100%);
+		background: radial-gradient(center -5px, circle, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 59%,rgba(255,255,255,0) 65%,rgba(255,255,255,0) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=1 );
+
+	}
+
+/* a bit less padding on the number inside */
+#adminmenu li .awaiting-mod span, 
+#adminmenu li span.update-plugins span, 
+#sidemenu li a span.update-plugins span {
+	padding: 0 4px;
+}
+
+
+/* ============================================================== */
+/*   IE 8 Only Styles */
+/*  ============================================================== */
+
+.ie8 #adminmenu .awaiting-mod,
+.ie8 #adminmenu span.update-plugins,
+.ie8 #sidemenu li a span.update-plugins,
+.ie8 #sidemenu a .update-plugins, 
+.ie8 #rightnow .reallynow {
+	filter: 
+		progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 )
+		progid:DXImageTransform.Microsoft.Shadow(color=#888888,direction=180,strength=3) /* box-shadow replacement, bottom */
+		progid:DXImageTransform.Microsoft.Shadow(color=#b3b3b3,direction=90,strength=2) /* right */
+		progid:DXImageTransform.Microsoft.Shadow(color=#b3b3b3,direction=270,strength=2) /* left */;
+}
+
+	/* darker shadow for badged on active menus */
+	.ie8 #adminmenu li.current a .awaiting-mod,
+	.ie8 #adminmenu li a.wp-has-current-submenu .update-plugins {
+		filter: 
+			progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 )
+			progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=180,strength=3) /* bottom */
+			progid:DXImageTransform.Microsoft.Shadow(color=#666666,direction=90,strength=2) /* right */
+			progid:DXImageTransform.Microsoft.Shadow(color=#666666,direction=270,strength=2) /* left */;
+	}
