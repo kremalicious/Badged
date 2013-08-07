@@ -2,13 +2,27 @@
 /* ============================================================== */
 /*   Badged */
 /*   ------------------------ */
-/*   CSS Styles for the Admin Bar only */
+/*   CSS Styles for the Admin Menu only */
 /*   by Matthias Kretschmann | http://mkretschmann.com */
 /* ============================================================== */
 
+
+/* Select all instances of the WP notification bubble using the 
+   same selectors WP uses */
+
+#adminmenu .awaiting-mod,
+#adminmenu span.update-plugins,
+#sidemenu li a span.update-plugins,
+#sidemenu a .update-plugins, 
+#rightnow .reallynow,
 #wp-admin-bar-updates .ab-label,
 #wp-admin-bar-comments .ab-label {
+	/* need to be rude for these */
 	background-color: #d5231f !important;
+	-webkit-box-shadow: 0px 2px 2px #888 !important;
+	-moz-box-shadow: 0px 2px 2px #888 !important;
+	box-shadow: 0px 2px 2px #888 !important;
+	
 	color: #fff; /* just in case, is white per WP default */
 	font: 11px/15px Helvetica, Verdana, Geneva, sans-serif;
 	text-shadow: 0 1px 1px #771717;
@@ -31,17 +45,21 @@
 	background-clip: padding-box;
 
 	margin-top: -1px;
-	
-	padding: 0 3px;
-	position: relative;
-	-webkit-box-shadow: 0px 2px 2px #000 !important;
-	-moz-box-shadow: 0px 2px 2px #000 !important;
-	box-shadow: 0px 2px 2px #000 !important;
-	vertical-align: baseline;
 }
-
-
+	
+	/* darker shadow for badged on active menus */
+	#adminmenu li.current a .awaiting-mod,
+	#adminmenu li a.wp-has-current-submenu .update-plugins {
+		-webkit-box-shadow: 0px 2px 2px #444 !important;
+		-moz-box-shadow: 0px 2px 2px #444 !important;
+		box-shadow: 0px 2px 2px #444 !important;
+	}
+	
 	/* inject another styling layer, for inset shadow & shine gradient */
+	#adminmenu .awaiting-mod:before,
+	#adminmenu .update-plugins:before,
+	#sidemenu .update-plugins:before,
+	.reallynow:before,
 	#wp-admin-bar-updates .ab-label:before,
 	#wp-admin-bar-comments .ab-label:before {
 		content: "";
@@ -50,7 +68,7 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-
+		
 		-webkit-border-radius: 10px;
 		-moz-border-radius: 10px;
 		border-radius: 10px;
@@ -68,18 +86,39 @@
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=1 );
 
 	}
-	
+
+/* a bit less padding on the number inside */
+#adminmenu li .awaiting-mod span, 
+#adminmenu li span.update-plugins span, 
+#sidemenu li a span.update-plugins span {
+	padding: 0 4px;
+}
 
 
 /* ============================================================== */
 /*   IE 8 Only Styles */
 /*  ============================================================== */
 
+.ie8 #adminmenu .awaiting-mod,
+.ie8 #adminmenu span.update-plugins,
+.ie8 #sidemenu li a span.update-plugins,
+.ie8 #sidemenu a .update-plugins, 
+.ie8 #rightnow .reallynow,
 .ie8 #wp-admin-bar-updates .ab-label,
 .ie8 #wp-admin-bar-comments .ab-label {
 	filter: 
 		progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 )
-		progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=180,strength=3) /* bottom */
-		progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=90,strength=2) /* right */
-		progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=270,strength=2); /* left */
+		progid:DXImageTransform.Microsoft.Shadow(color=#888888,direction=180,strength=3) /* box-shadow replacement, bottom */
+		progid:DXImageTransform.Microsoft.Shadow(color=#b3b3b3,direction=90,strength=2) /* right */
+		progid:DXImageTransform.Microsoft.Shadow(color=#b3b3b3,direction=270,strength=2) /* left */;
 }
+
+	/* darker shadow for badged on active menus */
+	.ie8 #adminmenu li.current a .awaiting-mod,
+	.ie8 #adminmenu li a.wp-has-current-submenu .update-plugins {
+		filter: 
+			progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 )
+			progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=180,strength=3) /* bottom */
+			progid:DXImageTransform.Microsoft.Shadow(color=#666666,direction=90,strength=2) /* right */
+			progid:DXImageTransform.Microsoft.Shadow(color=#666666,direction=270,strength=2) /* left */;
+	}
