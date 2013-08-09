@@ -51,8 +51,16 @@ else if (isset($network_plugin)) {
 	$badged_plugin_file = $network_plugin;
 }
 
-define('BADGED_PLUGIN_FILE', $badged_plugin_file);
-//define('BADGED_PLUGIN_PATH', WP_PLUGIN_DIR.'/'.basename(dirname($badged_plugin_file)));
+// Define constants
+if ( ! defined( 'BADGED_URL' ) ){
+    define('BADGED_URL', plugin_dir_url($badged_plugin_file));
+}
+if ( ! defined( 'BADGED_PATH' ) ){
+    define('BADGED_PATH', WP_PLUGIN_DIR.'/'.basename(dirname($badged_plugin_file)).'/');
+}
+if ( ! defined( 'BADGED_BASENAME' ) ){
+    define('BADGED_BASENAME', plugin_basename( $badged_plugin_file ));
+}
 
 /**
  * Let's roll
@@ -61,9 +69,9 @@ define('BADGED_PLUGIN_FILE', $badged_plugin_file);
  *
  */
 
-require_once( plugin_dir_path( BADGED_PLUGIN_FILE ) . 'class-badged.php' );
+require_once( BADGED_PATH . 'class-badged.php' );
 
-register_activation_hook( BADGED_PLUGIN_FILE, array( 'Badged', 'activate' ) );
-register_deactivation_hook( BADGED_PLUGIN_FILE, array( 'Badged', 'deactivate' ) );
+register_activation_hook( $badged_plugin_file, array( 'Badged', 'activate' ) );
+register_deactivation_hook( $badged_plugin_file, array( 'Badged', 'deactivate' ) );
 
 Badged::get_instance();

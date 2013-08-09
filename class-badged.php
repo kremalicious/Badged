@@ -127,7 +127,7 @@ class Badged {
 		$locale = apply_filters( 'bdgd', get_locale(), $domain );
 
 		load_textdomain( $domain, WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
-		load_plugin_textdomain( $domain, FALSE, dirname( plugin_basename( BADGED_PLUGIN_FILE ) ) . '/lang/' );
+		load_plugin_textdomain( $domain, FALSE, dirname( BADGED_BASENAME ) . '/lang/' );
 	}
 
 	/**
@@ -144,10 +144,10 @@ class Badged {
 
 		$screen = get_current_screen();
 		if ( $screen->id == $this->plugin_screen_hook_suffix ) {
-			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'css/options.css', BADGED_PLUGIN_FILE ), array(), $this->version );
+			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'css/options.css', BADGED_BASENAME ), array(), $this->version );
 		}
 		
-		wp_enqueue_style( $this->plugin_slug . '-plugin-styles', plugins_url( 'css/badged.css', BADGED_PLUGIN_FILE ), array(), $this->version );
+		wp_enqueue_style( $this->plugin_slug . '-plugin-styles', plugins_url( 'css/badged.css', BADGED_BASENAME ), array(), $this->version );
 
 	}
 
