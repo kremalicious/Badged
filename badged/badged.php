@@ -72,22 +72,12 @@ if ( ! defined( 'BADGED_BASENAME' ) ){
  *
  */
 
-//
-// Public Stuff
-//
-require_once( BADGED_PATH . '/public/class-badged.php' );
-
-register_activation_hook( $badged_plugin_file, array( 'Badged', 'activate' ) );
-register_deactivation_hook( $badged_plugin_file, array( 'Badged', 'deactivate' ) );
-
-add_action( 'plugins_loaded', array( 'Badged', 'get_instance' ) );
-
-//
-// Admin Stuff
-//
 if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
-
+    
 	require_once( BADGED_PATH . '/admin/class-badged-admin.php' );
-	add_action( 'plugins_loaded', array( 'Badged_Admin', 'get_instance' ) );
+	add_action( 'plugins_loaded', array( 'Badged', 'get_instance' ) );
+    
+    register_activation_hook( $badged_plugin_file, array( 'Badged', 'activate' ) );
+    register_deactivation_hook( $badged_plugin_file, array( 'Badged', 'deactivate' ) );
 
 }
