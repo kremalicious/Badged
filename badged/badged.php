@@ -6,7 +6,7 @@
  * Just activate and enjoy the red badges.
  *
  * @package   Badged
- * @author    Matthias Kretschmann <desk@kremalicious.com>
+ * @author    Matthias Kretschmann <m@kretschmann.io>
  * @license   GPL-2.0+
  * @link      http://kremalicious.com/badged/
  * @copyright 2013 Matthias Kretschmann
@@ -17,10 +17,10 @@
  * Description: 	Transforms the standard WordPress update & comment notification badges into iOS-styled ones. Just activate and enjoy the red badges.
  * Author: 			Matthias Kretschmann
  * Author URI: 		http://matthiaskretschmann.com
- * Version: 		1.0.0
+ * Version: 		2.0.0
  * License:     	GPL-2.0+
  * License URI: 	http://www.gnu.org/licenses/gpl-2.0.txt
- * Domain Path: 	/lang
+ * Domain Path: 	/languages
  * Text Domain: 	bdgd
  */
 
@@ -52,6 +52,9 @@ else if (isset($network_plugin)) {
 }
 
 // Define constants
+if ( ! defined( 'BADGED_FILE' ) ){
+    define('BADGED_FILE', $badged_plugin_file);
+}
 if ( ! defined( 'BADGED_URL' ) ){
     define('BADGED_URL', plugin_dir_url($badged_plugin_file));
 }
@@ -65,13 +68,26 @@ if ( ! defined( 'BADGED_BASENAME' ) ){
 /**
  * Let's roll
  *
- * @since 1.0.0
+ * @since 2.0.0
  *
  */
 
-require_once( BADGED_PATH . 'class-badged.php' );
+//
+// Public Stuff
+//
+require_once( BADGED_PATH . '/public/class-badged.php' );
 
 register_activation_hook( $badged_plugin_file, array( 'Badged', 'activate' ) );
 register_deactivation_hook( $badged_plugin_file, array( 'Badged', 'deactivate' ) );
 
-Badged::get_instance();
+add_action( 'plugins_loaded', array( 'Badged', 'get_instance' ) );
+
+//
+// Admin Stuff
+//
+if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+
+	require_once( BADGED_PATH . '/admin/class-badged-admin.php' );
+	add_action( 'plugins_loaded', array( 'Badged_Admin', 'get_instance' ) );
+
+}
