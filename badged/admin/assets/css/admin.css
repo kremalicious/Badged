@@ -3,7 +3,8 @@
 /* ============================================================== */
 
 #badgedoptions a,
-input.button-primary {
+input.button-primary,
+.kremalicious {
 	text-decoration: none;
 	-webkit-transition: all .2s ease-in-out 0s;
 	   -moz-transition: all .2s ease-in-out 0s;
@@ -28,7 +29,7 @@ input.button-primary {
 }
 
 #badgedoptions .icon32 {
-	background-image: url(../img/icon-badged-32.png);
+	background-image: url('../img/icon-badged-32.png');
 	background-repeat: no-repeat;
   background-position: center center;
 }
@@ -47,10 +48,22 @@ input.button-primary {
 
 .kremalicious {
   background: url('../img/kremalicious-cloud.svg') no-repeat left -2px;
-  padding-left: 20px;
-  margin-left: 10px;
   background-size: 16px;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  margin-right: 1px;
+  margin-bottom: -1px;
+  display: inline-block;
+  vertical-align: bottom;
+  opacity: .5;
 }
+
+.kremalicious-link:hover .kremalicious {
+  opacity: 1;
+}
+
+
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
