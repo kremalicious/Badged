@@ -19,8 +19,6 @@
 		<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 	</header>
     
-    <?php settings_errors(); ?>
-    
     <form action="options.php" method="POST">
         <?php 
             settings_fields( 'badged_settings' ); 

@@ -76,7 +76,7 @@ class Badged {
 		// Add the options page and menu item.
 		add_action( 'admin_menu', array( $this, 'add_plugin_admin_menu' ) );
         
-        // register settings, nicely isolated
+        // init settings, nicely isolated
         if ( ! empty ( $GLOBALS['pagenow'] )
             and ( 'options-general.php' === $GLOBALS['pagenow']
                 or 'options.php' === $GLOBALS['pagenow']
@@ -84,21 +84,7 @@ class Badged {
         ) {
             add_action( 'admin_init', array( $this, 'initialize_badged_settings' ) );
         }
-        
-		// Add an action link pointing to the options page.
-		$plugin_basename = plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_slug . '.php' );
-		add_filter( 'plugin_action_links_' . $plugin_basename, array( $this, 'add_action_links' ) );
 
-	}
-    
-	/**
-	 * Return the plugin slug.
-	 *
-	 * @since    2.0.0
-	 *@return    Plugin slug variable.
-	 */
-	public function get_plugin_slug() {
-		return $this->plugin_slug;
 	}
 
 	/**
@@ -236,7 +222,13 @@ class Badged {
 	 * @since    2.0.0
 	 */
 	private static function single_activate() {
-		// TODO: Define activation functionality here
+
+        // construct the default option array
+        $options = get_option('badged_settings');
+        $options['style'] = 'ios7';
+        
+        // set option
+		update_option( 'badged_settings', $options );
 	}
 
 	/**
@@ -245,7 +237,15 @@ class Badged {
 	 * @since    2.0.0
 	 */
 	private static function single_deactivate() {
-		// TODO: Define deactivation functionality here
+		
+        // deregister all settings
+        unregister_setting(
+            'badged_settings',
+            'badged_settings'
+        );
+        
+        // clean up options in database
+        delete_option('badged_settings');
 	}
 
 	/**
