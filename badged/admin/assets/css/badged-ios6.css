@@ -42,9 +42,6 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 );
 	
 	border: 2px solid #fff;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
 	
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding-box;
@@ -54,10 +51,13 @@
 	min-width: 20px;
 	height: 20px;
 	display: inline-block;
-	border-radius: 20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
   padding-left: 3px;
   padding-right: 3px;
   position: relative;
+  margin-left: 2px;
   
 }
 	
