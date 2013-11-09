@@ -85,7 +85,7 @@ add_action( 'plugins_loaded', array( 'Badged', 'get_instance' ) );
 //
 // Admin Stuff
 //
-if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+if ( is_admin()  ) {
 
 	require_once( BADGED_PATH . '/admin/class-badged-admin.php' );
 	add_action( 'plugins_loaded', array( 'Badged_Admin', 'get_instance' ) );
