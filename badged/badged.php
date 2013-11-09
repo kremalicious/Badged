@@ -17,7 +17,7 @@
  * Description: 	Transforms the standard WordPress update & comment notification badges into iOS-styled ones. Just activate and enjoy the red badges.
  * Author: 			Matthias Kretschmann
  * Author URI: 		http://matthiaskretschmann.com
- * Version: 		2.0.0
+ * Version: 		1.0.0
  * License:     	GPL-2.0+
  * License URI: 	http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path: 	/languages
@@ -68,16 +68,12 @@ if ( ! defined( 'BADGED_BASENAME' ) ){
 /**
  * Let's roll
  *
- * @since 2.0.0
+ * @since 1.0.0
  *
  */
-
-//if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
     
-	require_once( BADGED_PATH . '/admin/class-badged-admin.php' );
-	add_action( 'plugins_loaded', array( 'Badged', 'get_instance' ) );
-    
-    register_activation_hook( $badged_plugin_file, array( 'Badged', 'activate' ) );
-    register_deactivation_hook( $badged_plugin_file, array( 'Badged', 'deactivate' ) );
+require_once( BADGED_PATH . '/admin/class-badged-admin.php' );
+add_action( 'plugins_loaded', array( 'Badged', 'get_instance' ) );
 
-    //}
+register_activation_hook( $badged_plugin_file, array( 'Badged', 'activate' ) );
+register_deactivation_hook( $badged_plugin_file, array( 'Badged', 'deactivate' ) );

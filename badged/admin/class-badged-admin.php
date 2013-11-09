@@ -21,16 +21,16 @@ class Badged {
 	/**
 	 * Plugin version, used for cache-busting of style and script file references.
 	 *
-	 * @since   2.0.0
+	 * @since    1.0.0
 	 * @var     string
 	 */
-	const VERSION = '2.0.0';
+	const VERSION = '1.0.0';
 
 	/**
 	 *
 	 * Unique identifier.
 	 *
-	 * @since    2.0.0
+	 * @since    1.0.0
 	 * @var      string
 	 */
 	protected $plugin_slug = 'badged';
@@ -38,7 +38,7 @@ class Badged {
 	/**
 	 * Instance of this class.
 	 *
-	 * @since   2.0.0
+	 * @since    1.0.0
 	 * @var      object
 	 */
 	protected static $instance = null;
@@ -46,7 +46,7 @@ class Badged {
 	/**
 	 * Slug of the plugin screen.
 	 *
-	 * @since   2.0.0
+	 * @since    1.0.0
 	 * @var      string
 	 */
 	protected $plugin_screen_hook_suffix = null;
@@ -55,7 +55,7 @@ class Badged {
 	 * Initialize the plugin by loading scripts & styles and adding a
 	 * settings page and menu.
 	 *
-	 * @since   2.0.0
+	 * @since    1.0.0
 	 */
 	private function __construct() {
         
@@ -90,7 +90,7 @@ class Badged {
 	/**
 	 * Return an instance of this class.
 	 *
-	 * @since   2.0.0
+	 * @since    1.0.0
 	 * @return    object    A single instance of this class.
 	 */
 	public static function get_instance() {
@@ -106,7 +106,7 @@ class Badged {
 	/**
 	 * Fired when the plugin is activated.
 	 *
-	 * @since    2.0.0
+	 * @since    1.0.0
 	 * @param    boolean    $network_wide    True if WPMU superadmin uses
 	 *                                       "Network Activate" action, false if
 	 *                                       WPMU is disabled or plugin is
@@ -142,7 +142,7 @@ class Badged {
 	/**
 	 * Fired when the plugin is deactivated.
 	 *
-	 * @since    2.0.0
+	 * @since    1.0.0
 	 * @param    boolean    $network_wide    True if WPMU superadmin uses
 	 *                                       "Network Deactivate" action, false if
 	 *                                       WPMU is disabled or plugin is
@@ -179,7 +179,7 @@ class Badged {
 	/**
 	 * Fired when a new site is activated with a WPMU environment.
 	 *
-	 * @since    2.0.0
+	 * @since    1.0.0
 	 * @param    int    $blog_id    ID of the new blog.
 	 */
 	public function activate_new_site( $blog_id ) {
@@ -200,7 +200,7 @@ class Badged {
 	 * - not spam
 	 * - not deleted
 	 *
-	 * @since    2.0.0
+	 * @since    1.0.0
 	 * @return   array|false    The blog ids, false if no matches.
 	 */
 	private static function get_blog_ids() {
@@ -219,7 +219,7 @@ class Badged {
 	/**
 	 * Fired for each blog when the plugin is activated.
 	 *
-	 * @since    2.0.0
+	 * @since    1.0.0
 	 */
 	private static function single_activate() {
 
@@ -234,7 +234,7 @@ class Badged {
 	/**
 	 * Fired for each blog when the plugin is deactivated.
 	 *
-	 * @since    2.0.0
+	 * @since    1.0.0
 	 */
 	private static function single_deactivate() {
 		
@@ -251,7 +251,7 @@ class Badged {
 	/**
 	 * Load the plugin text domain for translation.
 	 *
-	 * @since    2.0.0
+	 * @since    1.0.0
 	 */
 	public function load_plugin_textdomain() {
 
@@ -266,7 +266,7 @@ class Badged {
 	/**
 	 * Register and enqueue admin-specific style sheet.
 	 *
-	 * @since   2.0.0
+	 * @since    1.0.0
 	 * @return    null    Return early if no settings page is registered.
 	 */
 	public function enqueue_admin_styles() {
@@ -300,7 +300,7 @@ class Badged {
 	/**
 	 * Register and enqueue admin bar specific style sheet.
 	 *
-	 * @since   2.0.0
+	 * @since    1.0.0
 	 */
 	public function enqueue_adminbar_styles() {
 		
@@ -322,7 +322,7 @@ class Badged {
 
 	/**
 	 * Register the administration menu for this plugin into the WordPress Dashboard menu.
-	 * @since   2.0.0
+	 * @since    1.0.0
 	 */
 	public function add_plugin_admin_menu() {
 
@@ -338,7 +338,7 @@ class Badged {
 
 	/**
 	 * Render the settings page for this plugin.
-	 * @since   2.0.0
+	 * @since    1.0.0
 	 */
 	public function display_plugin_admin_page() {
 		include_once( 'views/admin.php' );
@@ -346,7 +346,7 @@ class Badged {
     
 	/**
 	 * Set default options
-	 * @since   2.0.0
+	 * @since    1.0.0
 	 */
     public function badged_default_settings() {
         
@@ -360,7 +360,7 @@ class Badged {
     
 	/**
 	 * Register settings
-	 * @since   2.0.0
+	 * @since    1.0.0
 	 */
     public function initialize_badged_settings() {
         
@@ -417,31 +417,5 @@ class Badged {
         echo $html;
 
     }
-
-	/**
-	 * Add settings action link to the plugins page.
-	 *
-	 * @since    2.0.0
-	 */
-	public function add_action_links( $links ) {
-
-		return array_merge(
-			array(
-				'settings' => '<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_slug ) . '">' . __( 'Settings', $this->plugin_slug ) . '</a>'
-			),
-			$links
-		);
-
-	}
-    
-	/**
-	 *        WordPress Actions: http://codex.wordpress.org/Plugin_API#Actions
-	 *        Action Reference:  http://codex.wordpress.org/Plugin_API/Action_Reference
-	 *
-	 * @since   2.0.0
-	 */
-	public function action_method_name() {
-		// TODO: Define your action hook callback here
-	}
 
 }
