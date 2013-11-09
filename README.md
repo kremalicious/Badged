@@ -1,14 +1,7 @@
-=== Badged ===
-Contributors: kremalicious
-Donate link: http://krlc.us/givecoffee
-Tags: notification, adminmenu, toolbar, ios, badge
-Requires at least: 2.7
-Tested up to: 3.8
-Stable tag: 1.0.0
 
-iOS Style Notification Badges for WordPress
-
-== Description ==
+# Badged
+-----------------------------------
+**iOS Style Notification Badges for WordPress**
 
 Badged transforms the standard WordPress update & comment notification badges into iOS-styled ones. Upon activation it automatically replaces the badge styles in the admin menu and the toolbar. An optional settings page allows to control whether the badges show up in the admin menu or toolbar only.
 
@@ -18,10 +11,12 @@ The plugin is localized in english & german.
 
 * * *
 
-[Badged Blog Post](http://kremalicious.com/badged/) | [Badged on github](https://github.com/kremalicious/badged) | [Donate](http://krlc.us/givecoffee)
+[Badged Blog Post](http://kremalicious.com/badged/) | [Badged on github](https://github.com/kremalicious/badged) | **[Donate](http://krlc.us/givecoffee)**
+
+* * *
 
 
-== Installation ==
+## Installation
 
 Just install using the automatic backend installer under Plugins > Add New, activate and enjoy the red badges. 
 
@@ -34,36 +29,37 @@ For manual installation:
 (optional) Adjust options under Settings > Badges
 
 
-== Screenshots ==
+## Screenshots
 
 1. Restyled notifications in Toolbar
 2. Restyled notifications in Admin Menu
 3. Settings page
 
-== Changelog ==
+## Changelog
 
-= v0.3.6 =
+### v0.3.6
+
 * tested for WP 3.4
 * settings page: Retina ready icon for high dpi devices, css only submit button
 * updated german translation
 
-= v0.3.5 =
+### v0.3.5
 * IE 8 improvements: box shadow, light gradient through DXImageTransform filters (but no rounded corners, sorry)
 * current versions of IE & Opera are now among the tested browsers
 * updated settings page links
 
-= v0.3.4 =
+### v0.3.4
 * more descriptive readme and settings footer with links to blog post & github page
 * updated translation
 
-= v0.3.2 =
+### v0.3.2
 * Make the plugin work if symlinked
 
-= v0.3 =
+### v0.3
 * initial beta release
 
-= v0.2 =
+### v0.2
 * added options to control whether the badges show up in admin menu or toolbar (default is both)
 
-= v0.1 =
+### v0.1
 * initial alpha release
