@@ -352,7 +352,7 @@ class Badged {
         
         add_settings_field(
             'Badged Style',
-            __( 'Badged Style', 'badged' ),
+            __( 'Set Style', 'badged' ),
             array( $this, 'badged_style_settings_radios_callback' ),
             'badged_settings',
             'badged_style_section'
@@ -372,12 +372,12 @@ class Badged {
 
         $options = get_option( 'badged_settings' );
         
-        $html = '<p>';
+        $html = '<p class="radio-row">';
         $html .= '<input type="radio" id="style_ios7" name="badged_settings[style]" value="ios7"' . checked( 'ios7', $options['style'], false ) . '/>';
         $html .= '&nbsp;';
         $html .= '<label for="style_ios7">iOS 7</label>';
         $html .= '</p>';
-        $html .= '<p>';
+        $html .= '<p class="radio-row">';
         $html .= '<input type="radio" id="style_ios6" name="badged_settings[style]" value="ios6"' . checked( 'ios6', $options['style'], false ) . '/>';
         $html .= '&nbsp;';
         $html .= '<label for="style_ios6">iOS 6</label>';

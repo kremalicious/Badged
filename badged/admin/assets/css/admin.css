@@ -12,11 +12,14 @@ input.button-primary {
 	        transition: all .2s ease-in-out 0s;
 }
 
-#badgedoptions form h2 {
+#badgedoptions form h3 {
 	border-bottom: 1px solid #eee;
 	border-top: 1px solid #eee;
 	margin-top: .5em;
 	padding: 10px 0;
+  font-family: HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 #badgedoptions footer {
@@ -36,6 +39,10 @@ input.button-primary {
 	border-top: 1px solid #eee;
 	margin-top: 4em;
 	margin-bottom: 3em;
+}
+
+#badgedoptions .radio-row {
+  margin-bottom: 0;
 }
 
 @media
