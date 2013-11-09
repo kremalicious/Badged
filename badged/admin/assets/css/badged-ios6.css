@@ -17,6 +17,11 @@
 #rightnow .reallynow,
 #wp-admin-bar-updates .ab-label,
 #wp-admin-bar-comments .ab-label {
+  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
 	/* need to be rude for these */
 	background-color: #d5231f !important;
 	-webkit-box-shadow: 0px 2px 2px #888 !important;
@@ -24,7 +29,8 @@
 	box-shadow: 0px 2px 2px #888 !important;
 	
 	color: #fff; /* just in case, is white per WP default */
-	font: 11px/15px Helvetica, Verdana, Geneva, sans-serif;
+	font: 11px/17px Helvetica, Verdana, Geneva, sans-serif;
+  text-align: center;
 	text-shadow: 0 1px 1px #771717;
 	
 	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
@@ -36,15 +42,23 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 );
 	
 	border: 2px solid #fff;
-	-webkit-border-radius: 10px; /* just in case, is 10px per WP default */
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
 	
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding-box;
 	background-clip: padding-box;
 
-	margin-top: -1px;
+	margin-top: -2px;
+	min-width: 20px;
+	height: 20px;
+	display: inline-block;
+	border-radius: 20px;
+  padding-left: 3px;
+  padding-right: 3px;
+  position: relative;
+  
 }
 	
 	/* darker shadow for badged on active menus */
@@ -91,7 +105,7 @@
 #adminmenu li .awaiting-mod span, 
 #adminmenu li span.update-plugins span, 
 #sidemenu li a span.update-plugins span {
-	padding: 0 4px;
+	padding: 0 2px;
 }
 
 
