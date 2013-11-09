@@ -23,14 +23,12 @@
     
     <form action="options.php" method="POST">
         <?php 
-            settings_fields( 'badged_setting' ); 
-            do_settings_sections( 'badged_view_section' ); 
+            settings_fields( 'badged_settings' ); 
+            do_settings_sections( 'badged_settings' ); 
             
             submit_button(); ?>
     </form>
-</div>
 
-	
 	<footer>
 		<p>
 			<?php _e('Thanks for using', 'bdgd'); ?> <a href="http://www.kremalicious.com/2011/12/badged/" title="Badged Blog Post">Badged</a> (<a href="https://github.com/kremalicious/Badged/" title="Badged On Github">github</a>) &middot; <a href="http://krlc.us/givecoffee"><strong><?php _e('Donate', 'bdgd'); ?></strong></a>

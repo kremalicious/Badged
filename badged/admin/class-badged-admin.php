@@ -51,6 +51,15 @@ class Badged_Admin {
 		// Add the options page and menu item.
 		add_action( 'admin_menu', array( $this, 'add_plugin_admin_menu' ) );
         
+        // register settings, nicely isolated
+        if ( ! empty ( $GLOBALS['pagenow'] )
+            and ( 'options-general.php' === $GLOBALS['pagenow']
+                or 'options.php' === $GLOBALS['pagenow']
+            )
+        ) {
+            add_action( 'admin_init', array( $this, 'initialize_badged_settings' ) );
+        }
+        
 		// Add an action link pointing to the options page.
 		$plugin_basename = plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_slug . '.php' );
 		add_filter( 'plugin_action_links_' . $plugin_basename, array( $this, 'add_action_links' ) );
@@ -95,7 +104,17 @@ class Badged_Admin {
             wp_enqueue_style( $this->plugin_slug .'-admin-styles', BADGED_URL . 'admin/assets/css/admin.css', array(), Badged::VERSION );
         }
 		
-		wp_enqueue_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged.css', array(), Badged::VERSION );
+        $options = get_option( 'badged_settings' );
+        
+        // Default Style
+        if ( 'ios7' == $options['style'] ) {
+            wp_enqueue_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged.css', array(), Badged::VERSION );
+        }
+        
+        // Old Style
+        if ( 'ios6' == $options['style'] ) {
+            wp_enqueue_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged-ios6.css', array(), Badged::VERSION );
+        }
 
 	}
 
@@ -108,8 +127,8 @@ class Badged_Admin {
 		$this->plugin_screen_hook_suffix = add_options_page(
 			__( 'Badged Settings', $this->plugin_slug ),
 			__( 'Badged', $this->plugin_slug ),
-			'read',
-			$this->plugin_slug,
+			'manage_options',
+			'badged_settings',
 			array( $this, 'display_plugin_admin_page' )
 		);
 
@@ -122,8 +141,80 @@ class Badged_Admin {
 	public function display_plugin_admin_page() {
 		include_once( 'views/admin.php' );
 	}
+    
+	/**
+	 * Set default options
+	 * @since   2.0.0
+	 */
+    public function badged_default_settings() {
+        
+        $defaults = array(
+            'style' => 'ios7'    
+        );
+    
+        return apply_filters( 'badged_default_settings', $defaults );
+        
+    }
+    
+	/**
+	 * Register settings
+	 * @since   2.0.0
+	 */
+    public function initialize_badged_settings() {
+        
+        if ( false == get_option( 'badged_settings' ) ) {        
+            add_option( 
+                'badged_settings', 
+                apply_filters( 
+                    'badged_default_settings', 
+                    $this->badged_default_settings()
+                )
+            );
+        } // end if
+        
+        add_settings_section(
+            'badged_style_section',
+            __( 'Style', 'badged' ),
+            array( $this, 'badged_style_settings_callback' ),
+            'badged_settings'
+        );
+        
+        add_settings_field(
+            'Badged Style',
+            __( 'Badged Style', 'badged' ),
+            array( $this, 'badged_style_settings_radios_callback' ),
+            'badged_settings',
+            'badged_style_section'
+        );
+        
+        register_setting(
+            'badged_settings',
+            'badged_settings'
+        );
+    }
+    
+    public function badged_style_settings_callback() {
+            echo '<p></p>';
+    }
+    
+    public function badged_style_settings_radios_callback() {
 
-	
+        $options = get_option( 'badged_settings' );
+        
+        $html .= '<p>';
+        $html = '<input type="radio" id="style_ios7" name="badged_settings[style]" value="ios7"' . checked( 'ios7', $options['style'], false ) . '/>';
+        $html .= '&nbsp;';
+        $html .= '<label for="style_ios7">iOS 7</label>';
+        $html .= '</p>';
+        $html .= '<p>';
+        $html .= '<input type="radio" id="style_ios6" name="badged_settings[style]" value="ios6"' . checked( 'ios6', $options['style'], false ) . '/>';
+        $html .= '&nbsp;';
+        $html .= '<label for="style_ios6">iOS 6</label>';
+        $html .= '</p>';
+        
+        echo $html;
+
+    }
 
 	/**
 	 * Add settings action link to the plugins page.
