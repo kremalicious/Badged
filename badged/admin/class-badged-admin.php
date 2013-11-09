@@ -52,7 +52,7 @@ class Badged {
 	protected $plugin_screen_hook_suffix = null;
 
 	/**
-	 * Initialize the plugin by loading admin scripts & styles and adding a
+	 * Initialize the plugin by loading scripts & styles and adding a
 	 * settings page and menu.
 	 *
 	 * @since   2.0.0
@@ -65,9 +65,14 @@ class Badged {
 		// Activate plugin when new blog is added
 		add_action( 'wpmu_new_blog', array( $this, 'activate_new_site' ) );
         
-		// Load admin style sheet
+		// Load admin style sheets
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
         
+		// Load admin bar style sheets
+        if ( is_admin_bar_showing() ) {
+		    add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_adminbar_styles' ) );
+        }
+            
 		// Add the options page and menu item.
 		add_action( 'admin_menu', array( $this, 'add_plugin_admin_menu' ) );
         
@@ -231,7 +236,7 @@ class Badged {
 	 * @since    2.0.0
 	 */
 	private static function single_activate() {
-		// TODO: Define deactivation functionality here
+		// TODO: Define activation functionality here
 	}
 
 	/**
@@ -272,19 +277,45 @@ class Badged {
 
 		$screen = get_current_screen();
         if ( $screen->id == $this->plugin_screen_hook_suffix ) {
-            wp_enqueue_style( $this->plugin_slug .'-admin-styles', BADGED_URL . 'admin/assets/css/admin.css', array(), Badged::VERSION );
+            wp_register_style( $this->plugin_slug .'-admin-styles', BADGED_URL . 'admin/assets/css/admin.css', array(), self::VERSION );
+            wp_enqueue_style( $this->plugin_slug .'-admin-styles' );
         }
 		
         $options = get_option( 'badged_settings' );
         
         // Default Style
         if ( 'ios7' == $options['style'] ) {
-            wp_enqueue_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged.css', array(), Badged::VERSION );
+            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged.css', array(), self::VERSION );
+            wp_enqueue_style( $this->plugin_slug .'-badged-styles' );
         }
         
         // Old Style
         if ( 'ios6' == $options['style'] ) {
-            wp_enqueue_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged-ios6.css', array(), Badged::VERSION );
+            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged-ios6.css', array(), self::VERSION );
+            wp_enqueue_style( $this->plugin_slug .'-badged-styles' );
+        }
+
+	}
+    
+	/**
+	 * Register and enqueue admin bar specific style sheet.
+	 *
+	 * @since   2.0.0
+	 */
+	public function enqueue_adminbar_styles() {
+		
+        $options = get_option( 'badged_settings' );
+        
+        // Default Style
+        if ( 'ios7' == $options['style'] ) {
+            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged.css', array(), self::VERSION );
+            wp_enqueue_style( $this->plugin_slug .'-badged-styles' );
+        }
+        
+        // Old Style
+        if ( 'ios6' == $options['style'] ) {
+            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged-ios6.css', array(), self::VERSION );
+            wp_enqueue_style( $this->plugin_slug .'-badged-styles' );
         }
 
 	}

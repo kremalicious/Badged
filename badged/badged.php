@@ -72,7 +72,7 @@ if ( ! defined( 'BADGED_BASENAME' ) ){
  *
  */
 
-if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+//if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
     
 	require_once( BADGED_PATH . '/admin/class-badged-admin.php' );
 	add_action( 'plugins_loaded', array( 'Badged', 'get_instance' ) );
@@ -80,4 +80,4 @@ if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
     register_activation_hook( $badged_plugin_file, array( 'Badged', 'activate' ) );
     register_deactivation_hook( $badged_plugin_file, array( 'Badged', 'deactivate' ) );
 
-}
+    //}
