@@ -201,8 +201,8 @@ class Badged_Admin {
 
         $options = get_option( 'badged_settings' );
         
-        $html .= '<p>';
-        $html = '<input type="radio" id="style_ios7" name="badged_settings[style]" value="ios7"' . checked( 'ios7', $options['style'], false ) . '/>';
+        $html = '<p>';
+        $html .= '<input type="radio" id="style_ios7" name="badged_settings[style]" value="ios7"' . checked( 'ios7', $options['style'], false ) . '/>';
         $html .= '&nbsp;';
         $html .= '<label for="style_ios7">iOS 7</label>';
         $html .= '</p>';
