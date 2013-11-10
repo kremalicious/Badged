@@ -1,7 +1,7 @@
 === Badged ===
 Contributors: kremalicious
 Donate link: http://krlc.us/givecoffee
-Tags: notification, adminmenu, toolbar, ios, badge
+Tags: notification, adminmenu, toolbar, adminbar, ios, badge, badged, badges
 Requires at least: 2.7
 Tested up to: 3.8
 Stable tag: 1.0.0
@@ -10,7 +10,7 @@ iOS Style Notification Badges for WordPress
 
 == Description ==
 
-Badged transforms the standard WordPress update & comment notification badges into iOS-styled ones. Upon activation it automatically replaces the badge styles in the admin menu and the toolbar. An optional settings page allows to control whether the badges show up in the admin menu or toolbar only.
+Badged transforms the standard WordPress update & comment notification badges into iOS-styled ones. Upon activation it automatically replaces the badge styles in the admin menu and the toolbar. An optional settings page allows to control whether the badges show up as the new default iOS style or styled as pre-iOS 7 badges.
 
 The badges are created without any images by using only CSS (box shadows, gradients, pseudo elements, you name it) and were tested in current versions of Safari, Chrome, Firefox, Opera & Internet Explorer. It should degrade gracefully in older browsers with some details missing like drop shadows or the highlight shine.
 
@@ -36,11 +36,24 @@ For manual installation:
 
 == Screenshots ==
 
-1. Restyled notifications in Toolbar
-2. Restyled notifications in Admin Menu
+1. Restyled notifications in Admin Menu
+2. Restyled notifications in Admin Bar
 3. Settings page
+4. Restyled pre-iOS 7 notifications in Admin Menu
+5. Restyled pre-iOS 7 notifications in Admin Bar
+
 
 == Changelog ==
+
+= v1.0.0 =
+* new default style based on iOS 7
+* new setting to switch back to pre-iOS 7 style
+* rewritten from the ground up based on Tom McFarlin's excellent [WordPress Plugin Boilerplate](https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate)
+* settings through WordPress Settings API
+* Retina banner for WordPress plugin repository listing
+* drop IE 8 support (still present in pre-iOS 7 style)
+* using Grunt for optimized images and minified css
+* confusing and ridiculous version number jump
 
 = v0.3.6 =
 * tested for WP 3.4
