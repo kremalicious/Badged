@@ -1,0 +1,55 @@
+/////////////////////////////////////
+// Scaffolding
+/////////////////////////////////////
+
+
+//
+// Variables
+//
+
+@font-size:         12px;
+@line-height:       20px;
+@font-weight: 		200;
+@font-family:       'Helvetica Neue', Helvetica, Verdana, Geneva, sans-serif;
+@font-color:        #fff;
+
+@font-size-ios6:    11px;
+@line-height-ios6:  17px;
+@font-weight-ios6:  normal;
+@font-family-ios6:  Helvetica, Verdana, Geneva, sans-serif;
+@font-color-ios6:   #fff;
+
+// High DPI Media Query
+@highDPI:           ~"print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) ";
+
+//
+// Mixins
+//
+
+// Border Radius
+.border-radius(@radius: 10px) {
+    border-radius: @radius;
+    background-clip: padding-box;
+}
+
+// Gradients
+#gradient {
+	.vertical(@startColor: #555, @endColor: #333) {
+		background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+		background-image: linear-gradient(top, @startColor, @endColor); // The standard
+		background-repeat: repeat-x;
+	}
+}
+
+// Transitions
+.transition(@transition: all .2s ease-in-out 0s) {
+  -webkit-transition: @transition;
+          transition: @transition;
+}
+
+// Box sizing
+.box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}

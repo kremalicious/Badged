@@ -1,0 +1,51 @@
+/////////////////////////////////////
+//
+// Badged
+// ------------------------ 
+// by Matthias Kretschmann
+// mkretschmann.com
+//
+/////////////////////////////////////
+
+
+@import 'scaffolding.less';
+
+// Select all instances of the WP notification bubble 
+// using the same selectors WP uses
+#adminmenu .awaiting-mod,
+#adminmenu span.update-plugins,
+#sidemenu li a span.update-plugins,
+#sidemenu a .update-plugins, 
+#rightnow .reallynow,
+#wp-admin-bar-updates .ab-label,
+#wp-admin-bar-comments .ab-label {
+    
+    font-size: @font-size;
+    font-weight: @font-weight;
+    font-family: @font-family;
+    line-height: @line-height;
+    color: @font-color;
+    text-align: center;
+    
+    // WP defaults overwrites, need to be rude for these
+    background: #ff0000 !important;
+    box-shadow: 0 1px 0 rgba(0,0,0,.2) !important;
+    text-shadow: none !important;
+    
+    .box-sizing(border-box);
+    .border-radius;
+    
+    min-width: 20px;
+    height: 20px;
+    padding: 0 2px;
+    display: inline-block;
+
+    margin-top: -2px;
+    vertical-align: baseline;
+}
+
+#adminmenu li .awaiting-mod span, 
+#adminmenu li span.update-plugins span, 
+#sidemenu li a span.update-plugins span {
+	padding: 0;
+}

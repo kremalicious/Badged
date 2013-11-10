@@ -277,7 +277,7 @@ class Badged {
 
 		$screen = get_current_screen();
         if ( $screen->id == $this->plugin_screen_hook_suffix ) {
-            wp_register_style( $this->plugin_slug .'-admin-styles', BADGED_URL . 'admin/assets/css/admin.css', array(), self::VERSION );
+            wp_register_style( $this->plugin_slug .'-admin-styles', BADGED_URL . 'admin/assets/css/admin.min.css', array(), self::VERSION );
             wp_enqueue_style( $this->plugin_slug .'-admin-styles' );
         }
 		
@@ -285,13 +285,13 @@ class Badged {
         
         // Default Style
         if ( 'ios7' == $options['style'] ) {
-            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged.css', array(), self::VERSION );
+            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged.min.css', array(), self::VERSION );
             wp_enqueue_style( $this->plugin_slug .'-badged-styles' );
         }
         
         // Old Style
         if ( 'ios6' == $options['style'] ) {
-            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged-ios6.css', array(), self::VERSION );
+            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged-ios6.min.css', array(), self::VERSION );
             wp_enqueue_style( $this->plugin_slug .'-badged-styles' );
         }
 
@@ -308,13 +308,13 @@ class Badged {
         
         // Default Style
         if ( 'ios7' == $options['style'] ) {
-            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged.css', array(), self::VERSION );
+            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged.min.css', array(), self::VERSION );
             wp_enqueue_style( $this->plugin_slug .'-badged-styles' );
         }
         
         // Old Style
         if ( 'ios6' == $options['style'] ) {
-            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged-ios6.css', array(), self::VERSION );
+            wp_register_style( $this->plugin_slug .'-badged-styles', BADGED_URL . 'admin/assets/css/badged-ios6.min.css', array(), self::VERSION );
             wp_enqueue_style( $this->plugin_slug .'-badged-styles' );
         }
 
