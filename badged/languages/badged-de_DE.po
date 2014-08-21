@@ -1,89 +1,76 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Badged v1.0.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-11-10 15:07:38+0000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: CSL v1.x\n"
-"X-Poedit-Language: \n"
-"X-Poedit-Country: \n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
-"X-Poedit-Basepath: \n"
-"X-Poedit-Bookmarks: \n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Textdomain-Support: yes"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Badged\n"
+"Language: de\n"
 
+#. badged
 #: admin/class-badged-admin.php:330
-#@ badged
 msgid "Badged Settings"
 msgstr "Badged Einstellungen"
 
+#. badged
 #: admin/views/admin.php:30
-#@ badged
 msgid "Created by"
 msgstr "Erstellt von"
 
+#. badged
 #: admin/views/admin.php:29
-#@ badged
 msgid "Thanks for using"
 msgstr "Danke für die Nutzung von"
 
+#. badged
 #: admin/views/admin.php:29
-#@ badged
 msgid "Donate"
 msgstr "Spenden"
 
 #. translators: plugin header field 'Name'
+#. badged
 #: admin/class-badged-admin.php:331
 #: badged.php:0
-#@ badged
 msgid "Badged"
-msgstr ""
+msgstr "Badged"
 
+#. badged
 #: admin/class-badged-admin.php:379
-#@ badged
 msgid "Style"
 msgstr "Stil"
 
+#. badged
 #: admin/class-badged-admin.php:386
-#@ badged
 msgid "Set Style"
 msgstr "Stil setzen"
 
 #. translators: plugin header field 'PluginURI'
+#. badged
 #: badged.php:0
-#@ badged
 msgid "http://kremalicious.com/badged/"
-msgstr ""
+msgstr "http://kremalicious.com/badged/"
 
 #. translators: plugin header field 'Description'
+#. badged
 #: badged.php:0
-#@ badged
 msgid "Transforms the standard WordPress update & comment notification badges into iOS-styled ones. Just activate and enjoy the red badges."
-msgstr ""
+msgstr "Wandelt die Standard WordPress Kommentar- und Aktualisierungs-Benachrichtigungen im iOS-Stil um. Einfach aktivieren und die roten Benachrichtigungen genießen."
 
 #. translators: plugin header field 'Author'
+#. badged
 #: badged.php:0
-#@ badged
 msgid "Matthias Kretschmann"
-msgstr ""
+msgstr "Matthias Kretschmann"
 
 #. translators: plugin header field 'AuthorURI'
+#. badged
 #: badged.php:0
-#@ badged
 msgid "http://matthiaskretschmann.com"
-msgstr ""
+msgstr "http://matthiaskretschmann.com"
 
 #. translators: plugin header field 'Version'
+#. badged
 #: badged.php:0
-#@ badged
 msgid "1.0.0"
-msgstr ""
+msgstr "1.0.0"
 
