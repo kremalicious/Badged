@@ -9,7 +9,7 @@ Badged transforms the standard WordPress update & comment notification badges in
 
 The badges are created without any images by using only CSS (box shadows, gradients, pseudo elements, you name it) and were tested in current versions of Safari, Chrome, Firefox, Opera & Internet Explorer. It should degrade gracefully in older browsers with some details missing like drop shadows or the highlight shine.
 
-The plugin is localized in english & german.
+The plugin is localized in english, german & spanish.
 
 * * *
 
@@ -20,7 +20,7 @@ The plugin is localized in english & german.
 
 ## Installation
 
-Just install using the automatic backend installer under Plugins > Add New, activate and enjoy the red badges. 
+Just install using the automatic backend installer under Plugins > Add New, activate and enjoy the red badges.
 
 For manual installation:
 
@@ -32,6 +32,15 @@ For manual installation:
 
 
 ## Changelog
+
+### v1.0.1
+
+* tested for WP 4.0
+* Spanish translation, muchas gracias to Andrew Kurtis from [webhostinghub.com](http://www.webhostinghub.com)
+* don't style comments badge with 0 comments
+* improved styles
+* admin settings page fixes
+* plugin icon and updated banner & screenshots
 
 ### v1.0.0
 

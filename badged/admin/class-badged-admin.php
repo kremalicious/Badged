@@ -6,7 +6,7 @@
  * @author    Matthias Kretschmann <m@kretschmann.io>
  * @license   GPL-2.0+
  * @link      http://kremalicious.com/badged/
- * @copyright 2013 Matthias Kretschmann
+ * @copyright 2014 Matthias Kretschmann
  */
 
 /**

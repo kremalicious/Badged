@@ -9,7 +9,7 @@
  * @author    Matthias Kretschmann <m@kretschmann.io>
  * @license   GPL-2.0+
  * @link      http://kremalicious.com/badged/
- * @copyright 2013 Matthias Kretschmann
+ * @copyright 2014 Matthias Kretschmann
  *
  * @wordpress-plugin
  * Plugin Name: 	Badged
@@ -17,7 +17,7 @@
  * Description: 	Transforms the standard WordPress update & comment notification badges into iOS-styled ones. Just activate and enjoy the red badges.
  * Author: 			Matthias Kretschmann
  * Author URI: 		http://matthiaskretschmann.com
- * Version: 		1.0.0
+ * Version: 		1.0.1
  * License:     	GPL-2.0+
  * License URI: 	http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path: 	/languages
