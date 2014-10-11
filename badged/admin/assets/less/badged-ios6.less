@@ -30,7 +30,7 @@
 
     /* need to be rude for these */
     background-color: #d5231f !important;
-    box-shadow: 0px 2px 2px #888 !important;
+    box-shadow: 0px 2px 2px #000 !important;
     border: 2px solid #fff;  
     
     #gradient > .vertical(rgba(255,255,255,0.3), rgba(255,255,255,0));
@@ -77,6 +77,23 @@
 #adminmenu li span.update-plugins span, 
 #sidemenu li a span.update-plugins span {
 	padding: 0 2px;
+}
+
+
+//
+// Don't style comments badge with 0 comments
+//
+#wp-admin-bar-comments .ab-label.count-0 {
+    font-size: 13px;
+    background: none !important;
+    border: none;
+    box-shadow: none !important;
+    text-shadow: none;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    
+    &:before { display: none }
 }
 
 
