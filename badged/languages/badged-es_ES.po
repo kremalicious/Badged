@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"Project-Id-Version: Badged\n"
+"Language: en-us\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: jelena kovacevic <jecajeca260@gmail.com>\n"
+"Language-Team: \n"
+
+#. badged
+#: admin/class-badged-admin.php:330
+msgid "Badged Settings"
+msgstr "Ajustes de Badged "
+
+#. badged
+#: admin/views/admin.php:30
+msgid "Created by"
+msgstr "Creado por"
+
+#. badged
+#: admin/views/admin.php:29
+msgid "Thanks for using"
+msgstr "Gracias por usar"
+
+#. badged
+#: admin/views/admin.php:29
+msgid "Donate"
+msgstr "Donar"
+
+#. translators: plugin header field 'Name'
+#. badged
+#: admin/class-badged-admin.php:331 badged.php:0
+msgid "Badged"
+msgstr "Badged"
+
+#. badged
+#: admin/class-badged-admin.php:379
+msgid "Style"
+msgstr "Estilo"
+
+#. badged
+#: admin/class-badged-admin.php:386
+msgid "Set Style"
+msgstr "Modificar Estilo"
+
+#. translators: plugin header field 'PluginURI'
+#. badged
+#: badged.php:0
+msgid "http://kremalicious.com/badged/"
+msgstr "http://kremalicious.com/badged/"
+
+#. translators: plugin header field 'Description'
+#. badged
+#: badged.php:0
+msgid ""
+"Transforms the standard WordPress update & comment notification badges into "
+"iOS-styled ones. Just activate and enjoy the red badges."
+msgstr ""
+"Transforma la actualización de WordPress y los badges de notificaciones de "
+"comentarios y actualizaciones en unos con estilo iOS. Basta con activar y "
+"disfrutar de las insignias rojas."
+
+#. translators: plugin header field 'Author'
+#. badged
+#: badged.php:0
+msgid "Matthias Kretschmann"
+msgstr "Matthias Kretschmann"
+
+#. translators: plugin header field 'AuthorURI'
+#. badged
+#: badged.php:0
+msgid "http://matthiaskretschmann.com"
+msgstr "http://matthiaskretschmann.com"
+
+#. translators: plugin header field 'Version'
+#. badged
+#: badged.php:0
+msgid "1.0.0"
+msgstr "1.0.0"
