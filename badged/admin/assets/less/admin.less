@@ -24,34 +24,15 @@
         font-family: HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",sans-serif;
         font-size: 18px;
         font-weight: 400;
-        border-bottom: 1px solid #eee;
-        border-top: 1px solid #eee;
+        border-bottom: 1px solid @admin-border-color;
+        border-top: 1px solid @admin-border-color;
         margin-top: .5em;
         padding: 10px 0;
     }
 
     footer {
-    	border-top: 1px solid #eee;
+    	border-top: 1px solid @admin-border-color;
     	color: #666;
-    }
-
-    .icon32 {
-    	background: data-uri('../img/icon-badged-32.png') no-repeat center center;
-        
-        @media @highDPI {
-        	#badgedoptions .icon32 {
-        		background-image: url('../img/icon-badged-32@2x.png') !important;
-        		background-size: 32px 32px;
-        	}   
-        }
-    }
-
-    p.submit {
-    	background: #fcfcfc;
-    	padding: .7em .5em;
-    	border-top: 1px solid #eee;
-    	margin-top: 4em;
-    	margin-bottom: 3em;
     }
 
     .radio-row { margin-bottom: 0 }

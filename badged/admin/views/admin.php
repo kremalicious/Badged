@@ -18,15 +18,15 @@
     
     <form action="options.php" method="POST">
         <?php 
-            settings_fields( 'badged_settings' ); 
-            do_settings_sections( 'badged_settings' ); 
+            settings_fields( 'badged_settings' );
+            do_settings_sections( 'badged_settings' );
             
             submit_button(); ?>
     </form>
 
 	<footer>
 		<p>
-			<?php _e('Thanks for using', 'badged'); ?> <a href="http://www.kremalicious.com/2011/12/badged/" title="Badged Blog Post">Badged</a> (<a href="https://github.com/kremalicious/Badged/" title="Badged On Github">github</a>) &middot; <a href="http://krlc.us/givecoffee"><strong><?php _e('Donate', 'badged'); ?></strong></a>
+			<?php _e('Thanks for using', 'badged'); ?> <a href="https://kremalicious.com/badged/" title="Badged Blog Post">Badged</a> (<a href="https://github.com/kremalicious/Badged/" title="Badged On Github">github</a>) &middot; <a href="http://krlc.us/givecoffee"><strong><?php _e('Donate', 'badged'); ?></strong></a>
 			<span class="alignright"><?php _e('Created by', 'badged'); ?> <a class="kremalicious-link" href="http://mkretschmann.com"><span class="kremalicious"></span> Matthias Kretschmann</a> (<a href="https://twitter.com/kremalicious">@kremalicious</a>)</span>
 		</p>
 	</footer>
