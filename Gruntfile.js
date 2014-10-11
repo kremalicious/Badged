@@ -1,6 +1,6 @@
 module.exports = function(grunt){
     'use strict';
-    
+
     // banner
     grunt.log.writeln("");
     grunt.log.writeln("   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>");
@@ -9,11 +9,11 @@ module.exports = function(grunt){
     grunt.log.writeln("");
     grunt.log.writeln("   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>");
     grunt.log.writeln("");
-    
+
     // Grunt config
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        
+
         // less
         less: {
             dist: {
@@ -29,10 +29,10 @@ module.exports = function(grunt){
                 },
             },
         },
-        
+
         // image optimization
         imagemin: {
-            assets: {
+            dist: {
                 options: {
                     optimizationLevel: 7
                 },
@@ -40,13 +40,39 @@ module.exports = function(grunt){
                     {
                         expand: true,
                         cwd: 'badged/admin/assets/img/',
-                        src: ['**/*.{png,jpg,jpeg,gif,svg}'],
+                        src: ['**/*.{png,jpg,jpeg,gif}'],
                         dest: 'badged/admin/assets/img/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'assets/',
+                        src: ['**/*.{png,jpg,jpeg,gif}'],
+                        dest: 'assets/'
                     }
                 ]
-            },
+            }
         },
         
+        // svg optimization
+        svgmin: {
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'badged/admin/assets/img/',
+                        src: ['**/*.svg'],
+                        dest: 'badged/admin/assets/img/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'assets/',
+                        src: ['**/*.svg'],
+                        dest: 'assets/'
+                    }
+                ]
+            }
+        },
+
         // watch
         watch: {
             less: {
@@ -54,30 +80,31 @@ module.exports = function(grunt){
                 tasks: ['less']
             }
         }
-            
+
     });
-    
+
     // Load NPM Tasks, smart code stolen from @bluemaex <https://github.com/bluemaex>
     require('fs').readdirSync('node_modules').filter(function (file) {
         return file && file.indexOf('grunt-') > -1;
     }).forEach(function (file) {
         grunt.loadNpmTasks(file);
     });
-    
+
     // Default Task
     grunt.registerTask('default', [
         'watch'
     ]);
-    
+
     // Dev server
     grunt.registerTask('server', [
         'less',
         'watch'
     ]);
-    
+
     // Production build
     grunt.registerTask('build', [
         'imagemin',
+        'svgmin',
         'less'
     ]);
 

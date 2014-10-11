@@ -2,14 +2,15 @@
   "name": "Badged",
   "author": "Matthias Kretschmann <m@kretschmann.io>",
   "description": "iOS Style Notification Badges for WordPress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "Gruntfile.js",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-contrib-imagemin": "~0.1.4",
     "grunt-contrib-less": "~0.6.4",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-imagemin": "~0.1.4"
+    "grunt-svgmin": "~1.0.0"
   },
   "repository": {
     "type": "git",

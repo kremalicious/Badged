@@ -1,18 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="128" height="128" viewBox="0 0 128 128">
-  <defs>
-    <style>
-
-      .cls-4 {
-        fill: #7cacb0;
-      }
-
-      .cls-5 {
-        fill: #d0f2f5;
-      }
-    </style>
-  </defs>
-  <g id="iconsvg">
-    <circle id="circle-1" class="cls-4" cx="65" cy="65" r="46"/>
-    <path d="M64.145,57.234 C64.145,57.234 64.145,81.000 64.145,81.000 C64.145,81.000 68.645,81.000 68.645,81.000 C68.645,81.000 68.645,47.578 68.645,47.578 C68.645,47.578 65.316,47.578 65.316,47.578 C64.722,50.172 63.824,51.817 62.621,52.512 C61.418,53.207 59.293,53.703 56.246,54.000 C56.246,54.000 56.246,57.234 56.246,57.234 C56.246,57.234 64.145,57.234 64.145,57.234 Z" id="path-1" class="cls-5" fill-rule="evenodd"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="128" height="128" viewBox="0 0 128 128"><defs><style>.cls-3 { fill: #d0f2f5; } .cls-4 { fill: #7cacb0; }</style></defs><g id="iconsvg"><path id="rect-1" class="cls-3" d="M0 0h128v128H0z"/><circle id="circle-1" class="cls-4" cx="65" cy="65" r="46"/><path d="M64.145 57.234V81h4.5V47.578h-3.33c-.593 2.594-1.49 4.24-2.694 4.934-1.202.695-3.327 1.19-6.374 1.488v3.234h7.9z" id="path-1" class="cls-3" fill-rule="evenodd"/></g></svg>
